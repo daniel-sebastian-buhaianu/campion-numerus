@@ -25,9 +25,9 @@ int main()
 			g << i-- << ' ';
 		g << i << '\n';
 	}
-	k = 1, nrmax = 5;
-	while (n > nrmax) k++, nrmax += 5;
+	k = n%5 == 0 ? n/5 : n/5+1;
 	g << k << '\n';
+	nrmax = k*5;
 	nrmin = nrmax-4;
 	i = n-nrmin;
 	if (k%2)
